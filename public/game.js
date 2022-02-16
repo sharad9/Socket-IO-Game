@@ -115,10 +115,22 @@ socket.on('update positions', function (data) {
   players = data.players;
 });
 
+var loop = function () {
+  // var now = Date.now();
+  // var delta = now - then;
 
+  // if (delta > interval) {
+  //   render();
+  //   socket.emit('update keyboard', keyboard);
+  // }
+  render();
+  socket.emit('update keyboard', keyboard);
+  // then = now - (delta % interval);
+  requestAnimationFrame(loop);
+};
 
 /* Game loop */
-
+/*
 var loop = function () {
   var now = Date.now();
   var delta = now - then;
@@ -131,6 +143,7 @@ var loop = function () {
   then = now - (delta % interval);
   requestAnimationFrame(loop);
 };
+*/
 
 var then = Date.now();
 var interval = 1000 / FPS;
