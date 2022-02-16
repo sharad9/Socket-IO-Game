@@ -42,10 +42,12 @@ enemyImage.src = 'images/enemy.png';
 var renderPlayers = function () {
   for (var player in players) {
     if (players[player].id == playerId) {
-      ctx.drawImage(playerImage, players[player].x, players[player].y);
+      ctx.fillText('P',players[player].x, players[player].y);
+    //  ctx.drawImage(playerImage, players[player].x, players[player].y);
     }
     else {
-      ctx.drawImage(enemyImage, players[player].x, players[player].y);
+      ctx.fillText('E',players[player].x, players[player].y);
+    //  ctx.drawImage(enemyImage, players[player].x, players[player].y);
     }
 
     ctx.fillStyle = 'rgb(255, 255, 255)';
