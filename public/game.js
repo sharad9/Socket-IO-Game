@@ -6,7 +6,7 @@ var numPlayers = 0;
 var playerId;
 var playerName;
 
-var FPS = 10;
+var FPS = 60;
 
 
 
@@ -14,7 +14,7 @@ var FPS = 10;
 
 var canvas = document.createElement('canvas');
 var ctx = canvas.getContext('2d');
-canvas.width = 1000;
+canvas.width = 500;
 canvas.height = 500;
 document.body.appendChild(canvas);
 
